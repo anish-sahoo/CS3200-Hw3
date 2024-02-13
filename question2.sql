@@ -1,0 +1,10 @@
+INSERT INTO MusicVideo(track_id, video_director) VALUES (3, 'John Doe');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (14, 'Wizard Man');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (51, 'Jerry Cantrell');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (78, 'Apocalyptica');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (196, 'Buddy Guy');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (428, 'Queen');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (447, 'Paul Stanley');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (547, 'Coverdale');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (704, 'J.C. Fogerty');
+INSERT INTO MusicVideo(track_id, video_director) VALUES (1009, 'Foo Fighters');
