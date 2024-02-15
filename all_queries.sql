@@ -45,3 +45,22 @@ WHERE tracks.Milliseconds > (
 -- In this assignment you will practice the SQL skills developed in the course. For this, we will be using the sample SQLITE database found on https://www.sqlitetutorial.net/sqlite-sample-database/
 -- Download the database, and then, complete the following tasks:
 -- Write a query that lists all the customers that listen to longer-than-average tracks, excluding the tracks that are longer than 15 minutes.
+
+
+
+SELECT * 
+  FROM tracks
+WHERE
+  tracks.GenreId NOT IN (
+    SELECT 
+      GenreId 
+    FROM (
+      SELECT
+        GenreId,
+        SUM(Milliseconds) AS genre_duration
+      FROM tracks 
+        GROUP BY GenreId
+        ORDER BY genre_duration DESC
+        LIMIT(5)
+    )
+  );
