@@ -1,4 +1,7 @@
-SELECT DISTINCT C.CustomerId, C.FirstName, C.LastName
+SELECT DISTINCT 
+  C.CustomerId,
+  C.FirstName,
+  C.LastName
 FROM customers C
   JOIN invoices ON invoices.CustomerId = C.CustomerId
   JOIN invoice_items ON invoice_items.InvoiceId = invoices.InvoiceId
@@ -8,6 +11,10 @@ WHERE tracks.Milliseconds > (
   FROM tracks
   WHERE Milliseconds <= 900000
 );
--- Google Gemini explained how JOINs work in SQL, and gave me the code for the second half of the query.
--- I made some modifications to the query it generated
+-- Google Gemini (free version) explained how JOINs work in SQL, and gave me the code for the second half of the query.
+-- I then made some modifications to it, to make it return nicer results. 
 
+-- Prompt:
+-- In this assignment you will practice the SQL skills developed in the course. For this, we will be using the sample SQLITE database found on https://www.sqlitetutorial.net/sqlite-sample-database/
+-- Download the database, and then, complete the following tasks:
+-- Write a query that lists all the customers that listen to longer-than-average tracks, excluding the tracks that are longer than 15 minutes.

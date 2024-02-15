@@ -1,3 +1,5 @@
+-- ignore this file, it's a backup of all the SQL queries I've written for this project.
+
 CREATE TABLE "MusicVideo" (
   "video_id" INTEGER,
   "track_id" INTEGER NOT NULL UNIQUE,
@@ -36,11 +38,10 @@ WHERE tracks.Milliseconds > (
   FROM tracks
   WHERE Milliseconds <= 900000
 );
--- Google Gemini explained how JOINs work in SQL, and gave me the code for the second half of the query.
+-- Google Gemini (free version) explained how JOINs work in SQL, and gave me the code for the second half of the query.
 -- I then made some modifications to it, to make it return nicer results. 
 
 -- Prompt:
--- In this assignment you will practice the SQL skills developed in the course. For this, we will be using the sample SQLITE database found on https://www.sqlitetutorial.net/sqlite-sample-database/ . Links to an external site.
+-- In this assignment you will practice the SQL skills developed in the course. For this, we will be using the sample SQLITE database found on https://www.sqlitetutorial.net/sqlite-sample-database/
 -- Download the database, and then, complete the following tasks:
-
 -- Write a query that lists all the customers that listen to longer-than-average tracks, excluding the tracks that are longer than 15 minutes.
