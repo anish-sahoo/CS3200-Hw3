@@ -29,7 +29,7 @@ WHERE
     FROM (
       SELECT
         GenreId,
-        SUM(Milliseconds) genre_duration -- you can also replace this with AVG, and it should still work
+        AVG(Milliseconds) genre_duration -- you can also replace this with AVG, and it should still work
       FROM tracks 
         GROUP BY GenreId
         ORDER BY genre_duration DESC
